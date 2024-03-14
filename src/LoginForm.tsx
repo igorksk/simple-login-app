@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import './LoginForm.css'; // Import CSS file for styling
 
 interface LoginFormValues {
   username: string;
@@ -47,7 +48,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="login-form-container">
         {!loggedIn && <>
         <h1>Login</h1>
         <Formik
@@ -56,18 +57,18 @@ const LoginForm: React.FC = () => {
             validate={validate}
         >
             {({ isSubmitting }) => ( !isSubmitting &&
-            <Form>
-                <div>
+            <Form className="login-form">
+                <div className="form-group">
                 <label htmlFor="username">Username</label>
-                <Field type="text" name="username" />
-                <ErrorMessage name="username" component="div" />
+                <Field type="text" name="username" className="form-control"/>
+                <ErrorMessage name="username" component="div"  className="error-message" />
                 </div>
-                <div>
+                <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <Field type="password" name="password" />
-                <ErrorMessage name="password" component="div" />
+                <Field type="password" name="password" className="form-control" />
+                <ErrorMessage name="password" component="div"  className="error-message" />
                 </div>
-                <button type="submit">
+                <button type="submit"  className="submit-button">
                 Submit
                 </button>
             </Form>
@@ -77,7 +78,7 @@ const LoginForm: React.FC = () => {
       {loggedIn &&
        <>
        <h2>You logged in</h2>
-       <button type="submit" onClick={logOut}>
+       <button type="submit" onClick={logOut}  className="submit-button">
                 Log out
                 </button>
        </>
