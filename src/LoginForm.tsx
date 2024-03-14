@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
     if (!values.password) {
       errors.password = 'Password is required';
     } else if (values.password !== dbValues.password) {
-      errors.password = "Username is not correct";
+      errors.password = "Password is not correct";
     }
 
     return errors;
