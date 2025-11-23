@@ -2,6 +2,50 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+---
+
+# Simple Login App
+
+This is a simple React login application. It demonstrates basic form handling and authentication UI.
+
+## Table of Contents
+
+- [Setup](#setup)
+- [Usage](#usage)
+- [Available Scripts](#available-scripts)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Setup
+
+1. **Clone the repository:**
+	```sh
+	git clone https://github.com/igorksk/simple-login-app.git
+	cd simple-login-app
+	```
+2. **Install dependencies:**
+	```sh
+	npm install
+	```
+3. **Start the development server:**
+	```sh
+	npm run dev
+	```
+	The app will be available at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Usage
+
+1. Open the app in your browser.
+2. Enter your username and password in the login form.
+3. Click "Login" to submit.
+4. You will see a success or error message based on your input.
+
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
